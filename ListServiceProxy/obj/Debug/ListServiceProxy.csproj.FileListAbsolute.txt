@@ -1,0 +1,12 @@
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\ListServiceProxy.dll.config
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\ListServiceProxy.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\ListServiceProxy.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\Afiniti.Framework.LoggingTracing.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\Common.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\DocumentFormat.OpenXml.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\Common.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\bin\Debug\DocumentFormat.OpenXml.xml
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\obj\Debug\ListServiceProxy.csprojAssemblyReference.cache
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\obj\Debug\ListServiceProxy.csproj.CopyComplete
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\obj\Debug\ListServiceProxy.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\ListServiceProxy\obj\Debug\ListServiceProxy.pdb

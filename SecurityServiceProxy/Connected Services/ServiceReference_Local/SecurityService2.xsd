@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Afiniti.GRM.SecurityDTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Afiniti.GRM.SecurityDTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6318/SecurityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:6318/SecurityService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+  <xs:complexType name="UserDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="CrowdObj" nillable="true" type="tns:CrowdUserObj" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoggedInFromNewIP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutlookGenieAttrMapping" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfPermission" />
+      <xs:element minOccurs="0" name="RoleKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRemoteKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="userObj" nillable="true" type="tns:UserObj" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDTO" nillable="true" type="tns:UserDTO" />
+  <xs:complexType name="CrowdUserObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalStatus" type="xs:short" />
+      <xs:element minOccurs="0" name="AuthenticationCode" type="xs:int" />
+      <xs:element minOccurs="0" name="AuthenticationMetaData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrowdSSOToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CrowdUserObj" nillable="true" type="tns:CrowdUserObj" />
+  <xs:complexType name="ArrayOfPermission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Permission" type="tns:Permission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermission" nillable="true" type="tns:ArrayOfPermission" />
+  <xs:complexType name="Permission">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdminLevel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CssClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentKey" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PermissionKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="SortOrder" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Permission" nillable="true" type="tns:Permission" />
+  <xs:complexType name="UserObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvatarURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserObj" nillable="true" type="tns:UserObj" />
+  <xs:complexType name="ArrayOfUser_Key_Mapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User_Key_Mapping" nillable="true" type="tns:User_Key_Mapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser_Key_Mapping" nillable="true" type="tns:ArrayOfUser_Key_Mapping" />
+  <xs:complexType name="User_Key_Mapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User_Key_Mapping" nillable="true" type="tns:User_Key_Mapping" />
+  <xs:complexType name="REST_UserObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusCode" type="xs:int" />
+      <xs:element minOccurs="0" name="UserKey" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="REST_UserObj" nillable="true" type="tns:REST_UserObj" />
+  <xs:complexType name="AppConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DownloadUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppConfiguration" nillable="true" type="tns:AppConfiguration" />
+  <xs:complexType name="CrowdUserObjMobile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppConfiguration" nillable="true" type="tns:AppConfiguration" />
+      <xs:element minOccurs="0" name="ApprovalStatus" type="xs:short" />
+      <xs:element minOccurs="0" name="AuthenticationCode" type="xs:int" />
+      <xs:element minOccurs="0" name="AuthenticationMetaData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrowdSSOToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpaceKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CrowdUserObjMobile" nillable="true" type="tns:CrowdUserObjMobile" />
+  <xs:complexType name="AuthRequestModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrowdSSOToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthRequestModel" nillable="true" type="tns:AuthRequestModel" />
+  <xs:complexType name="AuthResponseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrowdSSOToken" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="HttpStatusCode" type="q1:HttpStatusCode" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAvatarUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserDisplayName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthResponseModel" nillable="true" type="tns:AuthResponseModel" />
+</xs:schema>

@@ -1,0 +1,7 @@
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\bin\Debug\Common.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\bin\Debug\Common.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\bin\Debug\Afiniti.Framework.LoggingTracing.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\obj\Debug\Common.csproj.CopyComplete
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\obj\Debug\Common.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\obj\Debug\Common.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\Common\obj\Debug\Common.csprojAssemblyReference.cache

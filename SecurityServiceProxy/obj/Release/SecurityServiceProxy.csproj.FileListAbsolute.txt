@@ -1,0 +1,11 @@
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\SecurityServiceProxy.dll.config
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\SecurityServiceProxy.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\SecurityServiceProxy.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\Common.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\Afiniti.Framework.LoggingTracing.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\bin\Release\Common.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\obj\Release\SecurityServiceProxy.csprojAssemblyReference.cache
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\obj\Release\SecurityServiceProxy.csproj.CopyComplete
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\obj\Release\SecurityServiceProxy.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\obj\Release\SecurityServiceProxy.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\MobileWebAPIs\CommercialGateAPI\SecurityServiceProxy\obj\Release\SecurityServiceProxy.csproj.CoreCompileInputs.cache

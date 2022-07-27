@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7FE95E4-AEDE-465E-96B6-91712046F058}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ListServiceProxy</RootNamespace>
+    <AssemblyName>ListServiceProxy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afiniti.Framework.LoggingTracing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62fd2d71e5c3e62c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\FrameworkBinaries\Afiniti.Framework.LoggingTracing.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtendedModels\AccountModelMapper.cs" />
+    <Compile Include="ExtendedModels\KeyValPairModelMapper.cs" />
+    <Compile Include="Helpers\OpenXMLExcelHelper.cs" />
+    <Compile Include="ListProxy.cs" />
+    <Compile Include="Connected Services\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModelTrimmed.cs" />
+    <Compile Include="Models\ExcelModel.cs" />
+    <Compile Include="Models\KeyValPairModelCustom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService.wsdl" />
+    <None Include="Connected Services\ServiceReference\ListService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountAttributeModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountCommission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountDepartmentsAndContacts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountFinancialDetailsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountFinancialModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountFinancialOverview.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountFinancials.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountForecast.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountInfrastructureModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountKeyActionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountMemoViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountMilestones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountQueueDistribution.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountRelationshipModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AccountTeamsViewModelTabular.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ActionDiscussionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ActionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ActivityLogModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AiRoSalesSuiteMetaDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ApprovalStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AttributeLookupModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AttributeLookupWithId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AttributeModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AttributeModelWithValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.AvayaContactModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.BoardModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.BulkContactDropdownDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.BulkContactModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.BusinessCaseViewModelTabular.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CardModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CheckListModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CityModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CommercialGateFlatModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CommercialGateMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CommercialGateModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CommercialGateQueueModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CommercialText.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ContactCommission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ContactMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ContractModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ConversationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.CurrencyModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.DepartmentModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.DiscussionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.EventBudget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.EventModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ExecutiveSummaryModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FilterValueModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FinancialExportASExcelResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FinancialsTemplateModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FinancialStructuredReasons.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FinancialViewModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FinancialViewModelTabular.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FlatModelExport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.FrequentlyAskedWithAnswers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InstitutionDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InstitutionMeta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InstitutionMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InstitutionRelationships.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvestorRelationActivity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvestorRelationActivityMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvoiceAggregate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvoiceDetailModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvoiceDiscussionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.InvoiceModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.IRContactModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.KeyActionValidationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.KeyValPairGuid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.KeyValPairShort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.LinkToGenieContactModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.LinkToGenieInstitutionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.MilestoneViewModelTabular.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ParentAccountModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonAdditionalDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonArtifactsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonAttributeModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonEducationModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonExperienceModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonReportingModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PersonRoleModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.PipelineMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.RelationshipsDropdownDataModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.RoleModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.SearchPersonModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.SoundbiteModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.SoundbitesTemplateModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.SwimLaneModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewCommissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountAttributeModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountInfrastructureModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountKeyActionModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountKeyActionWishlistModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountQueueDistributionmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountRelationshipsmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountResponsibilityModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountSalesFunnelConfigModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAccountSalesMetricModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfActionDiscussionModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfActionModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfActivityLogModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAdminBusinessCaseModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAttributeLookupModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAttributeLookupModelWithStylemGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAttributeModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAttributeModelTrimmedmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAttributeModelWithValuemGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfAvayaAccountsFlatModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfBoardModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfBoardModelWithDetailmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCardModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCheckListModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCityModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfClassificationModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCombinedlModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCommercialGateFlatModelTrimmedmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCommercialGateModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCommercialTextmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfContactRoleKeyValuePairmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfContractHeaderViewModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfContractModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfConversationModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCountryModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCoverageMapModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCurrencyModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfCurrencyModelWithSymbolmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfDepartmentModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfDiscussionModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfDropDownValuesmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfEventModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfEventTypeModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfExecutiveSummaryModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfFeeTypeModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfFeeType_PairModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfFinancialDetailsModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfFrequentlyAskedWithAnswersmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfFriendlinessModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfGroupByPanelModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInfluenceModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInstitutionDataModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInvestorRelationActivitymGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInvoiceAggregatemGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInvoiceDiscussionModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfInvoiceTabularViewModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfIrActivityActionItemmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfIRContactModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfIRContactModelTrimmedmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfKeyValPairGuidmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfLegal_Card_FieldsmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfMilestonesModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonAdditionalDataModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonAttributeModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonClassificationModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonEducationModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonExperienceModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonRelationshipModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonReportingModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPersonRoleModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfPipelineSummaryFlatModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfQueueMilestoneModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfQueueTypeLookupModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfRelationshipModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfRelationshipWeightModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfRoleModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSalesFunnelViewmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSearchAccountModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSearchPersonModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSearchResultsmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSpringboardValidationItemsModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfSwimLaneModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfTitleModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfTrimmedAccountModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfTrimmedAccountSearchModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfTrimmedSearchPersonModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.ViewerAndPagingOfVikometerItemsModelmGFQGkGm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference\ListServiceProxy.ServiceReference.VikometerModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference\ListService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{FEEB6E12-FBCB-4B8C-8AC6-53554E6DE16D}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

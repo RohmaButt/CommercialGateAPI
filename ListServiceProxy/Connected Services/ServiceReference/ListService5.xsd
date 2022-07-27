@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Afiniti.Framework.WCF.Exceptions.ExceptionModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Afiniti.Framework.WCF.Exceptions.ExceptionModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.32.5.80/GRM/ListService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Globalization" />
+  <xs:import schemaLocation="http://10.32.5.80/GRM/ListService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="GeneralMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FaultContracts">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GeneralMessage" nillable="true" type="tns:GeneralMessage" />
+  <xs:complexType name="FaultContracts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Globalization" minOccurs="0" name="ErrorCulture" nillable="true" type="q1:CultureInfo" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GUID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultContracts" nillable="true" type="tns:FaultContracts" />
+  <xs:complexType name="UserAuthentication">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FaultContracts">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAuthentication" nillable="true" type="tns:UserAuthentication" />
+</xs:schema>

@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.32.5.80/GRM/ListService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+  <xs:import schemaLocation="http://10.32.5.80/GRM/ListService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ViewerAndPagingOfAttributeModelWithValuemGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeModelWithValue" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q1:ArrayOfAttributeModelWithValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAttributeModelWithValuemGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAttributeModelWithValuemGFQGkGm" />
+  <xs:complexType name="PagingClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemsPerPage" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalItems" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagingClass" nillable="true" type="tns:PagingClass" />
+  <xs:complexType name="ViewerAndPagingOfPersonRelationshipModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonRelationshipModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q2:ArrayOfPersonRelationshipModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonRelationshipModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonRelationshipModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInvestorRelationActivitymGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InvestorRelationActivity" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q3:ArrayOfInvestorRelationActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInvestorRelationActivitymGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInvestorRelationActivitymGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInstitutionDataModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InstitutionDataModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q4:ArrayOfInstitutionDataModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInstitutionDataModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInstitutionDataModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfIRContactModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IRContactModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q5:ArrayOfIRContactModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfIRContactModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfIRContactModelmGFQGkGm" />
+  <xs:complexType name="SearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LCID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchFiltersAndValues" nillable="true" type="tns:ArrayOfSearchFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCriteria" nillable="true" type="tns:SearchCriteria" />
+  <xs:complexType name="ArrayOfSearchFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchFilter" nillable="true" type="tns:SearchFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchFilter" nillable="true" type="tns:ArrayOfSearchFilter" />
+  <xs:complexType name="SearchFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombiningClause" nillable="true" type="tns:ArrayOfSearchFilter" />
+      <xs:element minOccurs="0" name="Comparison" type="tns:SearchComparison" />
+      <xs:element minOccurs="0" name="SearchExp" type="tns:SearchExpression" />
+      <xs:element minOccurs="0" name="SearchParameter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchFilter" nillable="true" type="tns:SearchFilter" />
+  <xs:simpleType name="SearchComparison">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equals" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="NotEquals" />
+      <xs:enumeration value="LessThanOrEqual" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="Between" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchComparison" nillable="true" type="tns:SearchComparison" />
+  <xs:simpleType name="SearchExpression">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="And" />
+      <xs:enumeration value="Or" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchExpression" nillable="true" type="tns:SearchExpression" />
+  <xs:complexType name="SortCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombineSort" nillable="true" type="tns:SortCriteria" />
+      <xs:element minOccurs="0" name="SortColumn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortDirection" type="tns:SortOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SortCriteria" nillable="true" type="tns:SortCriteria" />
+  <xs:simpleType name="SortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortOrder" nillable="true" type="tns:SortOrder" />
+  <xs:complexType name="ViewerAndPagingOfIrActivityActionItemmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IrActivityActionItem" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q6:ArrayOfIrActivityActionItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfIrActivityActionItemmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfIrActivityActionItemmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfIRContactModelTrimmedmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IRContactModelTrimmed" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q7:ArrayOfIRContactModelTrimmed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfIRContactModelTrimmedmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfIRContactModelTrimmedmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q8:ArrayOfPersonModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfEventModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EventModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q9:ArrayOfEventModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfEventModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfEventModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonExperienceModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonExperienceModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q10:ArrayOfPersonExperienceModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonExperienceModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonExperienceModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonRoleModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonRoleModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q11:ArrayOfPersonRoleModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonRoleModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonRoleModelmGFQGkGm" />
+  <xs:complexType name="ConfluenceDocuments">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GeneralNotification">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contentId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fileNameExtension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fileNameSuffix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="uniqueKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfluenceDocuments" nillable="true" type="tns:ConfluenceDocuments" />
+  <xs:complexType name="GeneralNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailBcc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailCc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailSubject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailTemplate" nillable="true" type="xs:string" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailTemplateValues" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element minOccurs="0" name="emailUsers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationAuthorUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notificationTitleUrl" nillable="true" type="xs:string" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="notifyUsers" nillable="true" type="q13:ArrayOfstring" />
+      <xs:element minOccurs="0" name="uniqueCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneralNotification" nillable="true" type="tns:GeneralNotification" />
+  <xs:complexType name="ViewerAndPagingOfCommercialTextmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CommercialText" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q14:ArrayOfCommercialText" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCommercialTextmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCommercialTextmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCommercialGateFlatModelTrimmedmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CommercialGateFlatModelTrimmed" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q15:ArrayOfCommercialGateFlatModelTrimmed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCommercialGateFlatModelTrimmedmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCommercialGateFlatModelTrimmedmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPipelineSummaryFlatModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PipelineSummaryFlatModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q16:ArrayOfPipelineSummaryFlatModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPipelineSummaryFlatModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPipelineSummaryFlatModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAvayaAccountsFlatModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AvayaAccountsFlatModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q17:ArrayOfAvayaAccountsFlatModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAvayaAccountsFlatModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAvayaAccountsFlatModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSearchPersonModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SearchPersonModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q18:ArrayOfSearchPersonModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSearchPersonModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSearchPersonModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfEventTypeModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EventTypeModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q19:ArrayOfEventTypeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfEventTypeModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfEventTypeModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfExecutiveSummaryModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExecutiveSummaryModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q20:ArrayOfExecutiveSummaryModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfExecutiveSummaryModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfExecutiveSummaryModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountInfrastructureModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountInfrastructureModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q21:ArrayOfAccountInfrastructureModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountInfrastructureModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountInfrastructureModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCurrencyModelWithSymbolmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CurrencyModelWithSymbol" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q22:ArrayOfCurrencyModelWithSymbol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCurrencyModelWithSymbolmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCurrencyModelWithSymbolmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInvoiceAggregatemGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InvoiceAggregate" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q23:ArrayOfInvoiceAggregate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInvoiceAggregatemGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInvoiceAggregatemGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInvoiceTabularViewModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InvoiceTabularViewModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q24:ArrayOfInvoiceTabularViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInvoiceTabularViewModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInvoiceTabularViewModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfActivityLogModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityLogModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q25:ArrayOfActivityLogModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfActivityLogModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfActivityLogModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInvoiceDiscussionModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InvoiceDiscussionModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q26:ArrayOfInvoiceDiscussionModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInvoiceDiscussionModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInvoiceDiscussionModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCommercialGateModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CommercialGateModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q27:ArrayOfCommercialGateModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCommercialGateModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCommercialGateModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountRelationshipsmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountRelationships" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q28:ArrayOfAccountRelationships" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountRelationshipsmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountRelationshipsmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfFrequentlyAskedWithAnswersmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FrequentlyAskedWithAnswers" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q29:ArrayOfFrequentlyAskedWithAnswers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfFrequentlyAskedWithAnswersmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfFrequentlyAskedWithAnswersmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfBoardModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BoardModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q30:ArrayOfBoardModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfBoardModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfBoardModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfBoardModelWithDetailmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BoardModelWithDetail" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q31:ArrayOfBoardModelWithDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfBoardModelWithDetailmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfBoardModelWithDetailmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSwimLaneModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SwimLaneModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q32:ArrayOfSwimLaneModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSwimLaneModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSwimLaneModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCheckListModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CheckListModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q33:ArrayOfCheckListModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCheckListModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCheckListModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfDiscussionModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DiscussionModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q34:ArrayOfDiscussionModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfDiscussionModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfDiscussionModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCardModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CardModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q35:ArrayOfCardModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCardModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCardModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfContractHeaderViewModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ContractHeaderViewModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q36:ArrayOfContractHeaderViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfContractHeaderViewModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfContractHeaderViewModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAttributeLookupModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeLookupModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q37:ArrayOfAttributeLookupModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAttributeLookupModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAttributeLookupModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfLegal_Card_FieldsmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Legal_Card_Fields" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q38:ArrayOfLegal_Card_Fields" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfLegal_Card_FieldsmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfLegal_Card_FieldsmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfContractModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ContractModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q39:ArrayOfContractModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfContractModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfContractModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfDropDownValuesmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DropDownValues" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q40:ArrayOfDropDownValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfDropDownValuesmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfDropDownValuesmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfKeyValPairGuidmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="KeyValPairGuid" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q41:ArrayOfKeyValPairGuid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfKeyValPairGuidmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfKeyValPairGuidmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfContactRoleKeyValuePairmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ContactRoleKeyValuePair" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q42:ArrayOfContactRoleKeyValuePair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfContactRoleKeyValuePairmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfContactRoleKeyValuePairmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfActionModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActionModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q43:ArrayOfActionModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfActionModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfActionModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q44:ArrayOfAccountModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfDepartmentModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DepartmentModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q45:ArrayOfDepartmentModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfDepartmentModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfDepartmentModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfClassificationModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ClassificationModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q46:ArrayOfClassificationModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfClassificationModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfClassificationModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfGroupByPanelModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="GroupByPanelModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q47:ArrayOfGroupByPanelModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfGroupByPanelModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfGroupByPanelModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSearchAccountModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SearchAccountModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q48:ArrayOfSearchAccountModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSearchAccountModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSearchAccountModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountAttributeModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountAttributeModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q49:ArrayOfAccountAttributeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountAttributeModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountAttributeModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfTrimmedAccountModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TrimmedAccountModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q50:ArrayOfTrimmedAccountModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfTrimmedAccountModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfTrimmedAccountModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountKeyActionModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountKeyActionModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q51:ArrayOfAccountKeyActionModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountKeyActionModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountKeyActionModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountKeyActionWishlistModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountKeyActionWishlistModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q52:ArrayOfAccountKeyActionWishlistModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountKeyActionWishlistModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountKeyActionWishlistModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAdminBusinessCaseModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AdminBusinessCaseModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q53:ArrayOfAdminBusinessCaseModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAdminBusinessCaseModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAdminBusinessCaseModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfTrimmedAccountSearchModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TrimmedAccountSearchModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q54:ArrayOfTrimmedAccountSearchModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfTrimmedAccountSearchModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfTrimmedAccountSearchModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountResponsibilityModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountResponsibilityModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q55:ArrayOfAccountResponsibilityModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountResponsibilityModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountResponsibilityModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfMilestonesModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MilestonesModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q56:ArrayOfMilestonesModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfMilestonesModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfMilestonesModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountSalesMetricModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountSalesMetricModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q57:ArrayOfAccountSalesMetricModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountSalesMetricModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountSalesMetricModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSalesFunnelViewmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SalesFunnelView" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q58:ArrayOfSalesFunnelView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSalesFunnelViewmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSalesFunnelViewmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfQueueMilestoneModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="QueueMilestoneModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q59:ArrayOfQueueMilestoneModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfQueueMilestoneModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfQueueMilestoneModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfQueueTypeLookupModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="QueueTypeLookupModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q60:ArrayOfQueueTypeLookupModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfQueueTypeLookupModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfQueueTypeLookupModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountQueueDistributionmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountQueueDistribution" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q61:ArrayOfAccountQueueDistribution" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountQueueDistributionmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountQueueDistributionmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAccountSalesFunnelConfigModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AccountSalesFunnelConfigModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q62:ArrayOfAccountSalesFunnelConfigModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAccountSalesFunnelConfigModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAccountSalesFunnelConfigModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSpringboardValidationItemsModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SpringboardValidationItemsModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q63:ArrayOfSpringboardValidationItemsModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSpringboardValidationItemsModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSpringboardValidationItemsModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfVikometerItemsModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="VikometerItemsModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q64:ArrayOfVikometerItemsModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfVikometerItemsModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfVikometerItemsModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfFeeTypeModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FeeTypeModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q65:ArrayOfFeeTypeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfFeeTypeModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfFeeTypeModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfFeeType_PairModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FeeType_PairModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q66:ArrayOfFeeType_PairModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfFeeType_PairModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfFeeType_PairModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAttributeModelTrimmedmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeModelTrimmed" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q67:ArrayOfAttributeModelTrimmed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAttributeModelTrimmedmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAttributeModelTrimmedmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfFinancialDetailsModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FinancialDetailsModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q68:ArrayOfFinancialDetailsModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfFinancialDetailsModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfFinancialDetailsModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfSearchResultsmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SearchResults" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q69:ArrayOfSearchResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfSearchResultsmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfSearchResultsmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCombinedlModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CombinedlModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q70:ArrayOfCombinedlModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCombinedlModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCombinedlModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfTrimmedSearchPersonModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TrimmedSearchPersonModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q71:ArrayOfTrimmedSearchPersonModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfTrimmedSearchPersonModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfTrimmedSearchPersonModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonReportingModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonReportingModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q72:ArrayOfPersonReportingModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonReportingModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonReportingModelmGFQGkGm" />
+  <xs:complexType name="ArrayOfSortCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SortCriteria" nillable="true" type="tns:SortCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSortCriteria" nillable="true" type="tns:ArrayOfSortCriteria" />
+  <xs:complexType name="ViewerAndPagingOfRoleModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RoleModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q73:ArrayOfRoleModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfRoleModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfRoleModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCityModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CityModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q74:ArrayOfCityModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCityModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCityModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCountryModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CountryModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q75:ArrayOfCountryModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCountryModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCountryModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAttributeModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q76:ArrayOfAttributeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAttributeModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAttributeModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfFriendlinessModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FriendlinessModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q77:ArrayOfFriendlinessModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfFriendlinessModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfFriendlinessModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfInfluenceModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InfluenceModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q78:ArrayOfInfluenceModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfInfluenceModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfInfluenceModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfRelationshipModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RelationshipModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q79:ArrayOfRelationshipModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfRelationshipModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfRelationshipModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfRelationshipWeightModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RelationshipWeightModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q80:ArrayOfRelationshipWeightModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfRelationshipWeightModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfRelationshipWeightModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfTitleModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TitleModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q81:ArrayOfTitleModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfTitleModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfTitleModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCurrencyModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CurrencyModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q82:ArrayOfCurrencyModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCurrencyModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCurrencyModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfAttributeLookupModelWithStylemGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeLookupModelWithStyle" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q83:ArrayOfAttributeLookupModelWithStyle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfAttributeLookupModelWithStylemGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfAttributeLookupModelWithStylemGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonAttributeModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonAttributeModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q84:ArrayOfPersonAttributeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonAttributeModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonAttributeModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfCoverageMapModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CoverageMapModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q85:ArrayOfCoverageMapModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfCoverageMapModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfCoverageMapModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonClassificationModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonClassificationModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q86:ArrayOfPersonClassificationModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonClassificationModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonClassificationModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonAdditionalDataModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonAdditionalDataModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q87:ArrayOfPersonAdditionalDataModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonAdditionalDataModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonAdditionalDataModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfPersonEducationModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PersonEducationModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q88:ArrayOfPersonEducationModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfPersonEducationModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfPersonEducationModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfConversationModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ConversationModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q89:ArrayOfConversationModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfConversationModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfConversationModelmGFQGkGm" />
+  <xs:complexType name="ViewerAndPagingOfActionDiscussionModelmGFQGkGm">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ViewerAndPagingOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActionDiscussionModel" Namespace="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageInformation" nillable="true" type="tns:PagingClass" />
+      <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Afiniti.DataModel.CustomEntities.Classes" minOccurs="0" name="ReviewResults" nillable="true" type="q90:ArrayOfActionDiscussionModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewerAndPagingOfActionDiscussionModelmGFQGkGm" nillable="true" type="tns:ViewerAndPagingOfActionDiscussionModelmGFQGkGm" />
+</xs:schema>

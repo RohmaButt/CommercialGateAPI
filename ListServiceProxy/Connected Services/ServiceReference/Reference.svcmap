@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6209e504-faa6-4fa9-8a18-5845354aca1c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.32.5.80/GRM/ListService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ListService.wsdl" MetadataType="Wsdl" ID="4693cd7f-57ac-4cdc-bdfa-c8006011c2fc" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?wsdl" />
+    <MetadataFile FileName="ListService.xsd" MetadataType="Schema" ID="cd677611-6cb0-40f8-ad35-52790ef32a9d" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ListService1.xsd" MetadataType="Schema" ID="ff20e273-02c7-41f4-88b1-5b32a46075d6" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd7" />
+    <MetadataFile FileName="ListService2.xsd" MetadataType="Schema" ID="344afb47-6db3-4a28-be94-3a982d310b99" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ListService3.xsd" MetadataType="Schema" ID="b26be1d0-ccea-43ef-9374-34c8eda5b53c" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ListService4.xsd" MetadataType="Schema" ID="819947e8-571d-40e7-921d-96db6e910b02" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ListService5.xsd" MetadataType="Schema" ID="937dd284-7f63-4e0b-9719-6080a00f9d74" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ListService6.xsd" MetadataType="Schema" ID="bf13fc8c-4735-4887-9f19-d043354ef7ea" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ListService7.xsd" MetadataType="Schema" ID="63b1fb93-e858-472a-918c-fe1b50d658f6" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ListService.disco" MetadataType="Disco" ID="fe7b8fb7-3bb6-4bb5-9c47-c16fd163eef9" SourceId="1" SourceUrl="http://10.32.5.80/GRM/ListService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

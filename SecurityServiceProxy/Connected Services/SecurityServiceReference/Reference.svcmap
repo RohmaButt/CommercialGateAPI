@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc7915f6-185a-4919-8a29-de70e858ca25" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.32.5.80/GRMSecurity/SecurityService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityService7.xsd" MetadataType="Schema" ID="25f813d2-e793-4401-9ced-5bb79763f3f3" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SecurityService71.xsd" MetadataType="Schema" ID="3a3a945e-1f1a-4b44-bc31-5b3f18a9b653" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SecurityService72.xsd" MetadataType="Schema" ID="79aee9ce-4fcc-4747-9353-fd4bc3a19b0a" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SecurityService73.xsd" MetadataType="Schema" ID="2035fd29-611b-47b9-b829-92d885aa2225" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SecurityService74.xsd" MetadataType="Schema" ID="d2881357-fb85-43f3-bd73-7fa498b1b3ff" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SecurityService75.xsd" MetadataType="Schema" ID="778084dd-5427-4065-89e9-80b0f654914f" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecurityService76.xsd" MetadataType="Schema" ID="5703d01f-1942-48b1-b9cc-cd6ac423a619" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SecurityService1.wsdl" MetadataType="Wsdl" ID="98ecbe8a-bb3d-41ca-8782-3bfdcea2b20a" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?wsdl" />
+    <MetadataFile FileName="SecurityService1.disco" MetadataType="Disco" ID="71345ec3-ae79-45b6-8396-c19d7b89d88b" SourceId="1" SourceUrl="http://10.32.5.80/GRMSecurity/SecurityService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

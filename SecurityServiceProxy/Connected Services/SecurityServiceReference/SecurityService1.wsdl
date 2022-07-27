@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecurityService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Afiniti.GRM.SecurityDTO" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Afiniti.GRM.SecurityService" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://10.32.5.80/GRMSecurity/SecurityService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SecurityService_GetUsersSecurityData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityData" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUsersSecurityData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromCrowd_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromCrowd" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromCrowd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromCrowdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromCrowdByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromCrowdByEmail" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromCrowdByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromCrowdByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromJira_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromJira" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_AuthenticateUserFromJira_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserFromJiraResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_SendApprovalRequestEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmail" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_SendApprovalRequestEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogUserSessionStartActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogUserSessionStartActivity" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogUserSessionStartActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogUserSessionStartActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogUserSessionEndActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogUserSessionEndActivity" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogUserSessionEndActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogUserSessionEndActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_VerifyUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserSession" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_VerifyUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInstance" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_UpdateUserSecretInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserSecretInfo" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_UpdateUserSecretInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserSecretInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByCrowdToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByCrowdToken" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByCrowdToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByCrowdTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByEmail" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByUsername" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ValidateUserSessionByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserSessionByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogOutFromCrowd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutFromCrowd" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_LogOutFromCrowd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutFromCrowdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ExpireUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExpireUserSession" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ExpireUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExpireUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_SaveSessionInDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSessionInDB" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_SaveSessionInDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSessionInDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserObjectFromCrowdToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserObjectFromCrowdToken" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserObjectFromCrowdToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserObjectFromCrowdTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CreateCrowdToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdToken" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CreateCrowdToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUsersSecurityDataByToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityDataByToken" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUsersSecurityDataByToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityDataByTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_RemoveSSOTokenFromCrowd_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSSOTokenFromCrowd" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_RemoveSSOTokenFromCrowd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSSOTokenFromCrowdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserDataByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataByEmail" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserDataByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetContactAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactAttributes" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetContactAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_UpdateContactMapping_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactMapping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_UpdateContactMapping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactMappingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserKeyByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserKeyByUserName" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserKeyByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserKeyByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserNameByUserKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameByUserKey" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetUserNameByUserKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameByUserKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_IsUserAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAdmin" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_IsUserAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetAllActiveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActiveUsers" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GetAllActiveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActiveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ETL_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_ETL_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_AuthenticateUserGenieMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserGenieMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_AuthenticateUserGenieMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserGenieMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_GetUserRemoteKeyByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRemoteKeyByEmail" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_GetUserRemoteKeyByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRemoteKeyByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_SendApprovalRequestEmailFromGenieMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmailFromGenieMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_SendApprovalRequestEmailFromGenieMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmailFromGenieMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_LogoutFromGenieMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutFromGenieMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_LogoutFromGenieMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutFromGenieMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_GetGenieAppConfig_IOS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenieAppConfig_IOS" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieMobile_GetGenieAppConfig_IOS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenieAppConfig_IOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_GetUsersSecurityDataByToken_CG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityDataByToken_CG" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_GetUsersSecurityDataByToken_CG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersSecurityDataByToken_CGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_AuthenticateAndAuthorizeByCrowd_CG_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateAndAuthorizeByCrowd_CG" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_AuthenticateAndAuthorizeByCrowd_CG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateAndAuthorizeByCrowd_CGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_AuthenticateByCrowd_CG_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateByCrowd_CG" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_CommercialGate_AuthenticateByCrowd_CG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateByCrowd_CGResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieFinancials_AuthenticateUserGenieFinancials_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserGenieFinancials" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieFinancials_AuthenticateUserGenieFinancials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserGenieFinancialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieFinancials_IsUserAuthenticated_GenieFinancials_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticated_GenieFinancials" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_GenieFinancials_IsUserAuthenticated_GenieFinancials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticated_GenieFinancialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_AuthenticateUserJiraMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserJiraMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_AuthenticateUserJiraMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserJiraMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_SendApprovalRequestEmailFromJiraMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmailFromJiraMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_SendApprovalRequestEmailFromJiraMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmailFromJiraMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_LogoutFromJiraMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutFromJiraMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_LogoutFromJiraMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutFromJiraMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_GetValidUserToken_JiraMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidUserToken_JiraMobile" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_GetValidUserToken_JiraMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidUserToken_JiraMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_GetJiraAppConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJiraAppConfig" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_JiraMobile_GetJiraAppConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJiraAppConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_Authenticate_TimeKeeping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate_TimeKeeping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_Authenticate_TimeKeeping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate_TimeKeepingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_CrowdAuthenticate_TimeKeeping_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrowdAuthenticate_TimeKeeping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_CrowdAuthenticate_TimeKeeping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrowdAuthenticate_TimeKeepingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_Logout_TimeKeeping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout_TimeKeeping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_Logout_TimeKeeping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Logout_TimeKeepingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_IsUserAuthenticated_TimeKeeping_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticated_TimeKeeping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_IsUserAuthenticated_TimeKeeping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticated_TimeKeepingResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_CreateCrowdTokenByUserName_TimeKeeping_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdTokenByUserName_TimeKeeping" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_TimeKeeping_CreateCrowdTokenByUserName_TimeKeeping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdTokenByUserName_TimeKeepingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_AuthenticateUser_DMSMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser_DMSMAC" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_AuthenticateUser_DMSMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser_DMSMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_SendApprovalRequestEmail_DMSMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmail_DMSMAC" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_SendApprovalRequestEmail_DMSMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendApprovalRequestEmail_DMSMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_Logout_DMSMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout_DMSMAC" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_Logout_DMSMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Logout_DMSMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_GetAppConfig_DMSMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfig_DMSMAC" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_GetAppConfig_DMSMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfig_DMSMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_GetValidUserToken_DMSMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidUserToken_DMSMAC" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DMS_GetValidUserToken_DMSMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidUserToken_DMSMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_IsUserAuthenticated_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticated" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_IsUserAuthenticated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAuthenticatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_CreateCrowdTokenByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdTokenByUserName" />
+  </wsdl:message>
+  <wsdl:message name="SecurityService_Insights_CreateCrowdTokenByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrowdTokenByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SecurityService">
+    <wsdl:operation name="GetUsersSecurityData">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUsersSecurityData" message="tns:SecurityService_GetUsersSecurityData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUsersSecurityDataResponse" message="tns:SecurityService_GetUsersSecurityData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromCrowd">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromCrowd" message="tns:SecurityService_AuthenticateUserFromCrowd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromCrowdResponse" message="tns:SecurityService_AuthenticateUserFromCrowd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromCrowdByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromCrowdByEmail" message="tns:SecurityService_AuthenticateUserFromCrowdByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromCrowdByEmailResponse" message="tns:SecurityService_AuthenticateUserFromCrowdByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromJira">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromJira" message="tns:SecurityService_AuthenticateUserFromJira_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/AuthenticateUserFromJiraResponse" message="tns:SecurityService_AuthenticateUserFromJira_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/SendApprovalRequestEmail" message="tns:SecurityService_SendApprovalRequestEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/SendApprovalRequestEmailResponse" message="tns:SecurityService_SendApprovalRequestEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogUserSessionStartActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/LogUserSessionStartActivity" message="tns:SecurityService_LogUserSessionStartActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/LogUserSessionStartActivityResponse" message="tns:SecurityService_LogUserSessionStartActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogUserSessionEndActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/LogUserSessionEndActivity" message="tns:SecurityService_LogUserSessionEndActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/LogUserSessionEndActivityResponse" message="tns:SecurityService_LogUserSessionEndActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/VerifyUserSession" message="tns:SecurityService_VerifyUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/VerifyUserSessionResponse" message="tns:SecurityService_VerifyUserSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUserInstance" message="tns:SecurityService_GetUserInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUserInstanceResponse" message="tns:SecurityService_GetUserInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSecretInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/UpdateUserSecretInfo" message="tns:SecurityService_UpdateUserSecretInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/UpdateUserSecretInfoResponse" message="tns:SecurityService_UpdateUserSecretInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByCrowdToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByCrowdToken" message="tns:SecurityService_ValidateUserSessionByCrowdToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByCrowdTokenResponse" message="tns:SecurityService_ValidateUserSessionByCrowdToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByEmail" message="tns:SecurityService_ValidateUserSessionByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByEmailResponse" message="tns:SecurityService_ValidateUserSessionByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByUsername" message="tns:SecurityService_ValidateUserSessionByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/ValidateUserSessionByUsernameResponse" message="tns:SecurityService_ValidateUserSessionByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOutFromCrowd">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/LogOutFromCrowd" message="tns:SecurityService_LogOutFromCrowd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/LogOutFromCrowdResponse" message="tns:SecurityService_LogOutFromCrowd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExpireUserSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/ExpireUserSession" message="tns:SecurityService_ExpireUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/ExpireUserSessionResponse" message="tns:SecurityService_ExpireUserSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSessionInDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/SaveSessionInDB" message="tns:SecurityService_SaveSessionInDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/SaveSessionInDBResponse" message="tns:SecurityService_SaveSessionInDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserObjectFromCrowdToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUserObjectFromCrowdToken" message="tns:SecurityService_GetUserObjectFromCrowdToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUserObjectFromCrowdTokenResponse" message="tns:SecurityService_GetUserObjectFromCrowdToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrowdToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/CreateCrowdToken" message="tns:SecurityService_CreateCrowdToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/CreateCrowdTokenResponse" message="tns:SecurityService_CreateCrowdToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersSecurityDataByToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUsersSecurityDataByToken" message="tns:SecurityService_GetUsersSecurityDataByToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUsersSecurityDataByTokenResponse" message="tns:SecurityService_GetUsersSecurityDataByToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSSOTokenFromCrowd">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/RemoveSSOTokenFromCrowd" message="tns:SecurityService_RemoveSSOTokenFromCrowd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/RemoveSSOTokenFromCrowdResponse" message="tns:SecurityService_RemoveSSOTokenFromCrowd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUserDataByEmail" message="tns:SecurityService_GetUserDataByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUserDataByEmailResponse" message="tns:SecurityService_GetUserDataByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetContactAttributes" message="tns:SecurityService_GetContactAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetContactAttributesResponse" message="tns:SecurityService_GetContactAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContactMapping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/UpdateContactMapping" message="tns:SecurityService_UpdateContactMapping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/UpdateContactMappingResponse" message="tns:SecurityService_UpdateContactMapping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUserKeyByUserName" message="tns:SecurityService_GetUserKeyByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUserKeyByUserNameResponse" message="tns:SecurityService_GetUserKeyByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserNameByUserKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetUserNameByUserKey" message="tns:SecurityService_GetUserNameByUserKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetUserNameByUserKeyResponse" message="tns:SecurityService_GetUserNameByUserKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/IsUserAdmin" message="tns:SecurityService_IsUserAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/IsUserAdminResponse" message="tns:SecurityService_IsUserAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService/GetAllActiveUsers" message="tns:SecurityService_GetAllActiveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService/GetAllActiveUsersResponse" message="tns:SecurityService_GetAllActiveUsers_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_ETL">
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_ETL/AuthenticateUser" message="tns:SecurityService_ETL_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_ETL/AuthenticateUserResponse" message="tns:SecurityService_ETL_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_GenieMobile">
+    <wsdl:operation name="AuthenticateUserGenieMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/AuthenticateUserGenieMobile" message="tns:SecurityService_GenieMobile_AuthenticateUserGenieMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/AuthenticateUserGenieMobileResponse" message="tns:SecurityService_GenieMobile_AuthenticateUserGenieMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRemoteKeyByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/GetUserRemoteKeyByEmail" message="tns:SecurityService_GenieMobile_GetUserRemoteKeyByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/GetUserRemoteKeyByEmailResponse" message="tns:SecurityService_GenieMobile_GetUserRemoteKeyByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmailFromGenieMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/SendApprovalRequestEmailFromGenieMobile" message="tns:SecurityService_GenieMobile_SendApprovalRequestEmailFromGenieMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/SendApprovalRequestEmailFromGenieMobileResponse" message="tns:SecurityService_GenieMobile_SendApprovalRequestEmailFromGenieMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutFromGenieMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/LogoutFromGenieMobile" message="tns:SecurityService_GenieMobile_LogoutFromGenieMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/LogoutFromGenieMobileResponse" message="tns:SecurityService_GenieMobile_LogoutFromGenieMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenieAppConfig_IOS">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/GetGenieAppConfig_IOS" message="tns:SecurityService_GenieMobile_GetGenieAppConfig_IOS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieMobile/GetGenieAppConfig_IOSResponse" message="tns:SecurityService_GenieMobile_GetGenieAppConfig_IOS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_CommercialGate">
+    <wsdl:operation name="GetUsersSecurityDataByToken_CG">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/GetUsersSecurityDataByToken_CG" message="tns:SecurityService_CommercialGate_GetUsersSecurityDataByToken_CG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/GetUsersSecurityDataByToken_CGResponse" message="tns:SecurityService_CommercialGate_GetUsersSecurityDataByToken_CG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAndAuthorizeByCrowd_CG">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/AuthenticateAndAuthorizeByCrowd_CG" message="tns:SecurityService_CommercialGate_AuthenticateAndAuthorizeByCrowd_CG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/AuthenticateAndAuthorizeByCrowd_CGResponse" message="tns:SecurityService_CommercialGate_AuthenticateAndAuthorizeByCrowd_CG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateByCrowd_CG">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/AuthenticateByCrowd_CG" message="tns:SecurityService_CommercialGate_AuthenticateByCrowd_CG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_CommercialGate/AuthenticateByCrowd_CGResponse" message="tns:SecurityService_CommercialGate_AuthenticateByCrowd_CG_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_GenieFinancials">
+    <wsdl:operation name="AuthenticateUserGenieFinancials">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieFinancials/AuthenticateUserGenieFinancials" message="tns:SecurityService_GenieFinancials_AuthenticateUserGenieFinancials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieFinancials/AuthenticateUserGenieFinancialsResponse" message="tns:SecurityService_GenieFinancials_AuthenticateUserGenieFinancials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthenticated_GenieFinancials">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_GenieFinancials/IsUserAuthenticated_GenieFinancials" message="tns:SecurityService_GenieFinancials_IsUserAuthenticated_GenieFinancials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_GenieFinancials/IsUserAuthenticated_GenieFinancialsResponse" message="tns:SecurityService_GenieFinancials_IsUserAuthenticated_GenieFinancials_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_JiraMobile">
+    <wsdl:operation name="AuthenticateUserJiraMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/AuthenticateUserJiraMobile" message="tns:SecurityService_JiraMobile_AuthenticateUserJiraMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/AuthenticateUserJiraMobileResponse" message="tns:SecurityService_JiraMobile_AuthenticateUserJiraMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmailFromJiraMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/SendApprovalRequestEmailFromJiraMobile" message="tns:SecurityService_JiraMobile_SendApprovalRequestEmailFromJiraMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/SendApprovalRequestEmailFromJiraMobileResponse" message="tns:SecurityService_JiraMobile_SendApprovalRequestEmailFromJiraMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutFromJiraMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/LogoutFromJiraMobile" message="tns:SecurityService_JiraMobile_LogoutFromJiraMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/LogoutFromJiraMobileResponse" message="tns:SecurityService_JiraMobile_LogoutFromJiraMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidUserToken_JiraMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/GetValidUserToken_JiraMobile" message="tns:SecurityService_JiraMobile_GetValidUserToken_JiraMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/GetValidUserToken_JiraMobileResponse" message="tns:SecurityService_JiraMobile_GetValidUserToken_JiraMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJiraAppConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/GetJiraAppConfig" message="tns:SecurityService_JiraMobile_GetJiraAppConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_JiraMobile/GetJiraAppConfigResponse" message="tns:SecurityService_JiraMobile_GetJiraAppConfig_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_TimeKeeping">
+    <wsdl:operation name="Authenticate_TimeKeeping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/Authenticate_TimeKeeping" message="tns:SecurityService_TimeKeeping_Authenticate_TimeKeeping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/Authenticate_TimeKeepingResponse" message="tns:SecurityService_TimeKeeping_Authenticate_TimeKeeping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrowdAuthenticate_TimeKeeping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/CrowdAuthenticate_TimeKeeping" message="tns:SecurityService_TimeKeeping_CrowdAuthenticate_TimeKeeping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/CrowdAuthenticate_TimeKeepingResponse" message="tns:SecurityService_TimeKeeping_CrowdAuthenticate_TimeKeeping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout_TimeKeeping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/Logout_TimeKeeping" message="tns:SecurityService_TimeKeeping_Logout_TimeKeeping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/Logout_TimeKeepingResponse" message="tns:SecurityService_TimeKeeping_Logout_TimeKeeping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthenticated_TimeKeeping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/IsUserAuthenticated_TimeKeeping" message="tns:SecurityService_TimeKeeping_IsUserAuthenticated_TimeKeeping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/IsUserAuthenticated_TimeKeepingResponse" message="tns:SecurityService_TimeKeeping_IsUserAuthenticated_TimeKeeping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrowdTokenByUserName_TimeKeeping">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/CreateCrowdTokenByUserName_TimeKeeping" message="tns:SecurityService_TimeKeeping_CreateCrowdTokenByUserName_TimeKeeping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_TimeKeeping/CreateCrowdTokenByUserName_TimeKeepingResponse" message="tns:SecurityService_TimeKeeping_CreateCrowdTokenByUserName_TimeKeeping_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ISecurityService_DMS">
+    <wsdl:operation name="AuthenticateUser_DMSMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService_DMS/AuthenticateUser_DMSMAC" message="tns:ISecurityService_DMS_AuthenticateUser_DMSMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService_DMS/AuthenticateUser_DMSMACResponse" message="tns:ISecurityService_DMS_AuthenticateUser_DMSMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmail_DMSMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService_DMS/SendApprovalRequestEmail_DMSMAC" message="tns:ISecurityService_DMS_SendApprovalRequestEmail_DMSMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService_DMS/SendApprovalRequestEmail_DMSMACResponse" message="tns:ISecurityService_DMS_SendApprovalRequestEmail_DMSMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout_DMSMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService_DMS/Logout_DMSMAC" message="tns:ISecurityService_DMS_Logout_DMSMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService_DMS/Logout_DMSMACResponse" message="tns:ISecurityService_DMS_Logout_DMSMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppConfig_DMSMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService_DMS/GetAppConfig_DMSMAC" message="tns:ISecurityService_DMS_GetAppConfig_DMSMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService_DMS/GetAppConfig_DMSMACResponse" message="tns:ISecurityService_DMS_GetAppConfig_DMSMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidUserToken_DMSMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService_DMS/GetValidUserToken_DMSMAC" message="tns:ISecurityService_DMS_GetValidUserToken_DMSMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService_DMS/GetValidUserToken_DMSMACResponse" message="tns:ISecurityService_DMS_GetValidUserToken_DMSMAC_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SecurityService_Insights">
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_Insights/Authenticate" message="tns:SecurityService_Insights_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_Insights/AuthenticateResponse" message="tns:SecurityService_Insights_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_Insights/Logout" message="tns:SecurityService_Insights_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_Insights/LogoutResponse" message="tns:SecurityService_Insights_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthenticated">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_Insights/IsUserAuthenticated" message="tns:SecurityService_Insights_IsUserAuthenticated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_Insights/IsUserAuthenticatedResponse" message="tns:SecurityService_Insights_IsUserAuthenticated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_Insights/GetAllUsers" message="tns:SecurityService_Insights_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_Insights/GetAllUsersResponse" message="tns:SecurityService_Insights_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrowdTokenByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/SecurityService_Insights/CreateCrowdTokenByUserName" message="tns:SecurityService_Insights_CreateCrowdTokenByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SecurityService_Insights/CreateCrowdTokenByUserNameResponse" message="tns:SecurityService_Insights_CreateCrowdTokenByUserName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="genie" type="tns:SecurityService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsersSecurityData">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUsersSecurityData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromCrowd">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/AuthenticateUserFromCrowd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromCrowdByEmail">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/AuthenticateUserFromCrowdByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUserFromJira">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/AuthenticateUserFromJira" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmail">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/SendApprovalRequestEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogUserSessionStartActivity">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/LogUserSessionStartActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogUserSessionEndActivity">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/LogUserSessionEndActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserSession">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/VerifyUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInstance">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUserInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSecretInfo">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/UpdateUserSecretInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByCrowdToken">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/ValidateUserSessionByCrowdToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByEmail">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/ValidateUserSessionByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserSessionByUsername">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/ValidateUserSessionByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOutFromCrowd">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/LogOutFromCrowd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExpireUserSession">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/ExpireUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSessionInDB">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/SaveSessionInDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserObjectFromCrowdToken">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUserObjectFromCrowdToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrowdToken">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/CreateCrowdToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersSecurityDataByToken">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUsersSecurityDataByToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSSOTokenFromCrowd">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/RemoveSSOTokenFromCrowd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataByEmail">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUserDataByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactAttributes">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetContactAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContactMapping">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/UpdateContactMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserKeyByUserName">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUserKeyByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserNameByUserKey">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetUserNameByUserKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAdmin">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/IsUserAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveUsers">
+      <soap:operation soapAction="http://tempuri.org/SecurityService/GetAllActiveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="geniemobile" type="tns:SecurityService_GenieMobile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateUserGenieMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_GenieMobile/AuthenticateUserGenieMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRemoteKeyByEmail">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_GenieMobile/GetUserRemoteKeyByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmailFromGenieMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_GenieMobile/SendApprovalRequestEmailFromGenieMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutFromGenieMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_GenieMobile/LogoutFromGenieMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenieAppConfig_IOS">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_GenieMobile/GetGenieAppConfig_IOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="commercialgate" type="tns:SecurityService_CommercialGate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsersSecurityDataByToken_CG">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_CommercialGate/GetUsersSecurityDataByToken_CG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAndAuthorizeByCrowd_CG">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_CommercialGate/AuthenticateAndAuthorizeByCrowd_CG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateByCrowd_CG">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_CommercialGate/AuthenticateByCrowd_CG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="jiramobile" type="tns:SecurityService_JiraMobile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateUserJiraMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_JiraMobile/AuthenticateUserJiraMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmailFromJiraMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_JiraMobile/SendApprovalRequestEmailFromJiraMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutFromJiraMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_JiraMobile/LogoutFromJiraMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidUserToken_JiraMobile">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_JiraMobile/GetValidUserToken_JiraMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJiraAppConfig">
+      <soap:operation soapAction="http://tempuri.org/SecurityService_JiraMobile/GetJiraAppConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="dmsmac" type="tns:ISecurityService_DMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateUser_DMSMAC">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService_DMS/AuthenticateUser_DMSMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendApprovalRequestEmail_DMSMAC">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService_DMS/SendApprovalRequestEmail_DMSMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout_DMSMAC">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService_DMS/Logout_DMSMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppConfig_DMSMAC">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService_DMS/GetAppConfig_DMSMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidUserToken_DMSMAC">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService_DMS/GetValidUserToken_DMSMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityService">
+    <wsdl:port name="genie" binding="tns:genie">
+      <soap:address location="http://10.32.5.80/GRMSecurity/SecurityService.svc" />
+    </wsdl:port>
+    <wsdl:port name="geniemobile" binding="tns:geniemobile">
+      <soap:address location="http://10.32.5.80/GRMSecurity/SecurityService.svc/geniemobile" />
+    </wsdl:port>
+    <wsdl:port name="commercialgate" binding="tns:commercialgate">
+      <soap:address location="http://10.32.5.80/GRMSecurity/SecurityService.svc/commercialgate" />
+    </wsdl:port>
+    <wsdl:port name="jiramobile" binding="tns:jiramobile">
+      <soap:address location="http://10.32.5.80/GRMSecurity/SecurityService.svc/jiramobile" />
+    </wsdl:port>
+    <wsdl:port name="dmsmac" binding="tns:dmsmac">
+      <soap:address location="http://10.32.5.80/GRMSecurity/SecurityService.svc/dms" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
